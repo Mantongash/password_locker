@@ -9,5 +9,9 @@
 import unittest
 from locker import Users
 
+
 class TestUsers(unittest.TestCase):
-  
+    """
+    A class that inherits the TestCase class from the unittest module.
+    This is a very important step.
+    """
