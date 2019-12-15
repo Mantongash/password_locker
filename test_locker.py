@@ -17,3 +17,6 @@ class TestUsers(unittest.TestCase):
     """
 
     def setup(self):
+      """
+      This runs before the test cases are run
+      """
