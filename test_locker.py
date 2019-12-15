@@ -8,3 +8,6 @@
 ##########################################
 import unittest
 from locker import Users
+
+class TestUsers(unittest.TestCase):
+  
