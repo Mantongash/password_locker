@@ -31,6 +31,9 @@ class TestUsers(unittest.TestCase):
 
     # Test for saving contacts
     def test_save_users(self):
+        """
+        Test to check the save feature
+        """
 
 
 if __name__ == "__main__":
