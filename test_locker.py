@@ -21,3 +21,7 @@ class TestUsers(unittest.TestCase):
         This runs before the test cases are run
         """
         self.new_user = Users("mantongash", "anthony")  # A new user
+
+    def test_init(self):
+
+    
