@@ -30,8 +30,7 @@ class TestUsers(unittest.TestCase):
         self.assertEqual(self.new_user.password, "anthony")
 
     # Test for saving contacts
-    def test_save_users:
-      
+    def test_save_users(self):
 
 
 if __name__ == "__main__":
