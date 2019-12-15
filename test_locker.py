@@ -6,3 +6,5 @@
 # 5. View saved account credentials.
 # 5. Delete an account credential.
 ##########################################
+import unittest
+from locker import Users
