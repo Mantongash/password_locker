@@ -35,6 +35,8 @@ class TestUsers(unittest.TestCase):
         Test to check the save feature
         """
 
+        self.new_user.save_contact()  # saving the new cont# setup and class creation up here
+
 
 if __name__ == "__main__":
     unittest.main()
