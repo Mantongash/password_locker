@@ -16,7 +16,7 @@ class TestUsers(unittest.TestCase):
     This is a very important step.
     """
 
-    def setup(self):
+    def setUp(self):
         """
         This runs before the test cases are run
         """
@@ -28,3 +28,7 @@ class TestUsers(unittest.TestCase):
         """
         self.assertEqual(self.new_user.username, "mantongash")
         self.assertEqual(self.new_user.password, "anthony")
+
+
+if __name__ == "__main__":
+    unittest.main()
