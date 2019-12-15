@@ -37,6 +37,13 @@ class TestUsers(unittest.TestCase):
 
         self.new_user.save_user()  # saving the new cont# setup and class creation up here
 
+    # Tear down function
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Users.user_list = []
+
 
 if __name__ == "__main__":
     unittest.main()
