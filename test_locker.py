@@ -17,6 +17,7 @@ class TestUsers(unittest.TestCase):
     """
 
     def setup(self):
-      """
-      This runs before the test cases are run
-      """
+        """
+        This runs before the test cases are run
+        """
+        self.new_user = Users("mantongash", "anthony")  # A new user
