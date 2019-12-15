@@ -11,8 +11,23 @@ class Users:
         self.username = username
         self.password = password
 
+    # Save user function
     def save_user(self):
-      """
-      Function for saving users
-      """
-      Users.user_list.append(self)
+        """
+        Function for saving users
+        """
+        Users.user_list.append(self)
+
+    # Delete user function
+    def delete_user(self):
+        """
+        Function to delete a user from the user list
+        """
+        Users.user_list.remove(self)
+
+
+class Credentials:
+    """
+    This class stores user credentials
+    """
+  
