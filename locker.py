@@ -31,10 +31,11 @@ class Credentials:
     This class stores user credentials
     """
 
-    def __init__(self, account, account_username, account_password):
+    def __init__(self, username, account, account_username, account_password):
         """
         Init method for creating new instances of account credentials
         """
+        self.username = username
         self.account = account
         self.account_username = account_username
         self.account_password = account_password
