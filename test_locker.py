@@ -23,5 +23,6 @@ class TestUsers(unittest.TestCase):
         self.new_user = Users("mantongash", "anthony")  # A new user
 
     def test_init(self):
-
-    
+        """
+        This is to make sure that the user is initialized properly
+        """
