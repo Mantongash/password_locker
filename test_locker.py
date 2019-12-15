@@ -26,3 +26,5 @@ class TestUsers(unittest.TestCase):
         """
         This is to make sure that the user is initialized properly
         """
+        self.assertEqual(self.new_user.username, "mantongash")
+        self.assertEqual(self.new_user.password, "anthony")
