@@ -47,3 +47,10 @@ class Credentials:
         Function for saving credentials
         """
         Users.user_list.append(self)
+
+              # Delete credential function
+    def delete_credentials(self):
+        """
+        Function for saving credentials
+        """
+        Credentials.credentials_list.remove(self)
