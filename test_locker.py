@@ -7,7 +7,7 @@
 # 5. Delete an account credential.
 ##########################################
 import unittest
-from locker import Users
+from locker import Users, Credentials
 
 
 class TestUsers(unittest.TestCase):
@@ -71,6 +71,22 @@ class TestCredentials(unittest.TestCase):
     """
     Class to test the account credentials
     """
+
+    def setUp(self):
+        """
+        This runs before the tests
+        """
+        self.new_credentials = Credentials(
+            "mantongash", "Facebook", "mantongash", "mantongash")
+
+    def test_credentials_init(self):
+      """
+      Test case to show that credentials are well initialized.
+      """
+      self.assertEqual(self.new_credentials.username, "mantongash")
+      self.assertEqual(self.new_credentials.account, "Facebook")
+      self.assertEqual(self.new_credentials.account_username, "mantongash")
+      self.assertEqual(self.new_credentials.account_password, "mantongash") 
 
 
 if __name__ == "__main__":
