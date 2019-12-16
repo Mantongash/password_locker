@@ -66,6 +66,19 @@ class TestUsers(unittest.TestCase):
         self.new_user.delete_user()  # Deleting a user object
         self.assertEqual(len(Users.user_list), 1)
 
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = Users("test", "test")  # new user
+        test_user.save_user()
+
+        user_exists = Users.user_exist("test")
+
+        self.assertTrue(user_exists)
+
 
 class TestCredentials(unittest.TestCase):
     """
