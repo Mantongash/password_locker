@@ -25,14 +25,27 @@ class Users:
         """
         Users.user_list.remove(self)
 
+    @classmethod
+    def user_exists(cls, name):
+        '''
+        Method that checks if a user exists from the user list.
+        Args:
+            name: Username to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.username == name:
+                return True
 
+        return False
 
 
 class Credentials:
     """
     This class stores user credentials
     """
-    credentials_list =[]
+    credentials_list = []
 
     def __init__(self, username, account, account_username, account_password):
         """
@@ -43,16 +56,38 @@ class Credentials:
         self.account_username = account_username
         self.account_password = account_password
 
-            # Save credential function
+        # Save credential function
     def save_credentials(self):
         """
         Function for saving credentials
         """
-        Users.user_list.append(self)
+        Credentials.credentials_list.append(self)
 
-              # Delete credential function
+        # Delete credential function
     def delete_credentials(self):
         """
         Function for saving credentials
         """
         Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.credentials_list
+
+    @classmethod
+    def credentials_exists(cls, online_account):
+        '''
+        Method that checks if a credential exists from the credentials list.
+        Args:
+            account_name: account_name to search if it exists
+        Returns :
+            Boolean: True or false depending if the credential exists
+        '''
+        for account in cls.credentials_list:
+            if account.account_username == online_account:
+                return True
+
+        return False

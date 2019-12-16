@@ -68,14 +68,14 @@ class TestUsers(unittest.TestCase):
 
     def test_user_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the user.
+        test to check if we can return a Boolean  if we cannot find the contact.
         '''
 
         self.new_user.save_user()
-        test_user = Users("test", "test")  # new user
+        test_user = Users("test", "test")  # new contact
         test_user.save_user()
 
-        user_exists = Users.user_exist("test")
+        user_exists = Users.user_exists("test")
 
         self.assertTrue(user_exists)
 
@@ -116,16 +116,16 @@ class TestCredentials(unittest.TestCase):
         '''
         Credentials.credentials_list = []
 
-    # Save multiple users
+    # Save multiple credentials
     def test_save_multiple_credentials(self):
         '''
         test_save_multiple_users to check if we can save multiple users
         objects to our user_list
         '''
         self.new_credentials.save_credentials()
-        test_credentials = Credentials(
+        trial_credentials = Credentials(
             "test", "Facebook", "test", "test")  # new credentials
-        test_credentials.save_credentials()
+        trial_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 2)
 
     # Test to delete Credentials
@@ -139,6 +139,28 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         self.new_credentials.delete_credentials()  # Deleting a user object
         self.assertEqual(len(Credentials.credentials_list), 1)
+
+    def test_credentials_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the credentials.
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials(
+            "test", "Facebook", "test", "test")  # new contact
+        test_credentials.save_credentials()
+
+        credentials_exists = Credentials.credentials_exists("test")
+
+        self.assertTrue(credentials_exists)
+
+    def test_display_all_credentials(self):
+        '''
+        method that returns a list of all contacts saved
+        '''           
+
+        self.assertEqual(Credentials.display_credentials(),
+                         Credentials.credentials_list)
 
 
 if __name__ == "__main__":
