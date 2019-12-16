@@ -39,3 +39,10 @@ class Credentials:
         self.account = account
         self.account_username = account_username
         self.account_password = account_password
+
+            # Save credential function
+    def save_credentials(self):
+        """
+        Function for saving credentials
+        """
+        Users.user_list.append(self)
