@@ -80,22 +80,21 @@ class TestCredentials(unittest.TestCase):
             "mantongash", "Facebook", "mantongash", "mantongash")
 
     def test_credentials_init(self):
-      """
-      Test case to show that credentials are well initialized.
-      """
-      self.assertEqual(self.new_credentials.username, "mantongash")
-      self.assertEqual(self.new_credentials.account, "Facebook")
-      self.assertEqual(self.new_credentials.account_username, "mantongash")
-      self.assertEqual(self.new_credentials.account_password, "mantongash") 
+        """
+        Test case to show that credentials are well initialized.
+        """
+        self.assertEqual(self.new_credentials.username, "mantongash")
+        self.assertEqual(self.new_credentials.account, "Facebook")
+        self.assertEqual(self.new_credentials.account_username, "mantongash")
+        self.assertEqual(self.new_credentials.account_password, "mantongash")
 
-     # Test for saving credentials
+       # Test for saving credentials
     def test_save_credentials(self):
         """
         Test to check the save feature
         """
 
-        self.new_credentials.test_save_credentials()  # saving the new credentials
-
+        self.new_credentials.save_credentials()  # saving the new credentials
 
 
 if __name__ == "__main__":
