@@ -88,6 +88,15 @@ class TestCredentials(unittest.TestCase):
       self.assertEqual(self.new_credentials.account_username, "mantongash")
       self.assertEqual(self.new_credentials.account_password, "mantongash") 
 
+     # Test for saving credentials
+    def test_save_credentials(self):
+        """
+        Test to check the save feature
+        """
+
+        self.new_credentials.test_save_credentials()  # saving the new credentials
+
+
 
 if __name__ == "__main__":
     unittest.main()
