@@ -96,6 +96,13 @@ class TestCredentials(unittest.TestCase):
 
         self.new_credentials.save_credentials()  # saving the new credentials
 
+    # Tear down function
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
+
 
 if __name__ == "__main__":
     unittest.main()
