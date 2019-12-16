@@ -30,6 +30,7 @@ class Credentials:
     """
     This class stores user credentials
     """
+    credentials_list =[]
 
     def __init__(self, username, account, account_username, account_password):
         """
