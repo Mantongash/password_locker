@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 from locker import Users, Credentials
 # from pynput.keyboard import Key, Controller
-from termcolor import colored
+# from termcolor import colored
 import time
 # import pyperclip
 
