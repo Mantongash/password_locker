@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 from locker import Users, Credentials
-from pynput.keyboard import Key, Controller
+# from pynput.keyboard import Key, Controller
 from termcolor import colored
 import time
 # import pyperclip
@@ -99,55 +99,19 @@ def main():
         elif short_code == "li":
             print("Kindly enter your details to log-in")
             print("Username:")
-            username = input()
+            usernam = input()
 
             print("Password:")
             password = input()
             for user in Users.user_list:
-                if user == username:
+                if user == usernam:
                     print("User is already registered")
                 else:
                     print("You are logged in")
-        # elif short_code ==
 
-        # elif short_code == 'dc':
-
-            #     if display_contacts():
-            #         print("Here is a list of all your contacts")
-            #         print('\n')
-
-            #         for contact in display_contacts():
-            #             print(
-            #                 f"{contact.first_name} {contact.last_name} .....{contact.phone_number}")
-
-            #         print('\n')
-            #     else:
-            #         print('\n')
-            #         print("You dont seem to have any contacts saved yet")
-            #         print('\n')
-
-            # elif short_code == 'fc':
-
-            #     print("Enter the number you want to search for")
-
-            #     search_number = input()
-            #     if check_existing_contacts(search_number):
-            #         search_contact = find_contact(search_number)
-            #         print(
-            #             f"{search_contact.first_name} {search_contact.last_name}")
-            #         print('-' * 20)
-
-            #         print(
-            #             f"Phone number.......{search_contact.phone_number}")
-            #         print(f"Email address.......{search_contact.email}")
-            #     else:
-            #         print("That contact does not exist")
-
-            # elif short_code == "ex":
-            #     print("Bye .......")
-            #     break
-            # else:
-            #     print("I realsly didn't get that. Please use the short codes")
+        elif short_code == "ex":
+            print(f"Thanks for visiting us. Have a great day {user_name}")
+            break
 
 
 if __name__ == '__main__':
